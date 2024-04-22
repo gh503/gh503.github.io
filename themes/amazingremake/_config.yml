@@ -349,7 +349,7 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-  enabled: true
+  enabled: false
   type: gitalk                  # Recommended: gitalk
   language: zh-CN               # Localization language key, en, zh-CN and zh-TW are currently available.
   owner: ''                     # (required) GitHub user name
