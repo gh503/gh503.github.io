@@ -241,6 +241,12 @@ widgets:
     type: links
     # Names and URLs of the sites
     links:
+      ROS: https://wiki.ros.org/
+      RISC-V: https://docs.google.com/document/d/1Qjf6BwMmtqTfzftr3WWf2bRv8Cl4f0qZrWWbr0jCBSU/edit?pli=1
+      玄铁: https://www.xrvm.cn/
+      Github: https://docs.github.com/zh
+      二丫讲梵: https://wiki.eryajf.net/nav/#_5-%E4%BC%98%E8%B4%A8%E8%AE%BA%E5%9D%9B
+      鹏城实验室: https://www.pcl.ac.cn/
       Hexo: https://hexo.io
     show_mode: default
 
