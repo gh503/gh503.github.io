@@ -20,12 +20,14 @@ keywords:
 ## 前言
 请先参考文章进行操作：[免费CDN：jsDelivr+Github 使用方法](https://zhuanlan.zhihu.com/p/76951130)，完成图片资源的CDN访问。
 
+## 使用步骤
 避免资源失效，这里简单说一下步骤：
 1.创建自己的github仓库用于存放资源文件，比如`gh_username/CDN`；
 2.提交图片到仓库，比如位置在`CDN/img/pic.jpg`；
 3.发布版本如`Release 1.0.0`，假设 `tag v1.0.0`；
 4.发布完成后，可以直接使用`jsdelivr`访问，路径为: `https://cdn.jsdelivr.net/gh/gh_username/CDN@1.0.0/img/pic.jpg`
 
+## 网站资源说明
 因为不涉及版权，网站图片资源使用的是[pixabay免版税图片](https://pixabay.com/zh/)。
 
 
