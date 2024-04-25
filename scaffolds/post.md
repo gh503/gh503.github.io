@@ -3,14 +3,12 @@ thumbnail:
 title: {{ title }}
 date: {{ date }}
 tags:
--test1
--test2
+    -test1
 categories: 
--test3
--test4
+    -test2
 toc: true
 recommend: 1
-keywords: categories-java
+keywords:
 uniqueId: {{ date }}/{{ title }}.html
 mathJax: false
 ---
