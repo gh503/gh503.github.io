@@ -3,9 +3,7 @@ thumbnail:
 title: {{ title }}
 date: {{ date }}
 tags:
-    -test1
-categories: 
-    -test2
+categories:
 toc: true
 recommend: 1
 keywords:
