@@ -32,7 +32,7 @@ keywords:
 ## 配置
 
 ### 1.配置一键截图
-![](flameshot-key)https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/flameshot-key.png
+![flameshot-key](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/flameshot-key.png)
 
 使用快捷键`Ctrl Alt A`，直接可以截图。
 
