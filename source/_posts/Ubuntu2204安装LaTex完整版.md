@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-26 07:50:13/Ubuntu2204安装LaTex完整版.html
 mathJax: false
 date: 2024-04-26 15:50:13
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@0.1/img/iceland-2154209_1920.jpg
+thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/img/iceland-2154209_1920.jpg
 tags:
     - 'LaTex'
 categories:
