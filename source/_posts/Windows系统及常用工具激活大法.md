@@ -21,7 +21,7 @@ keywords:
 
 使用`Windows Cmd`[脚本](https://github.com/gh503/xdeploy/blob/master/windows/MAS_AIO-CRC32_60BA35A8.cmd)激活，来源于[massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts/tree/master/MAS/All-In-One-Version)。
 
-千万不要在一些破解软件随便下载激活工具，容易感染病毒。
+千万不要随便在一些破解网站下载激活工具，容易感染病毒。
 
 ## IDM授权
 
