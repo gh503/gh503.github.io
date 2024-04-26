@@ -28,7 +28,7 @@ comments: false
 #### 博客信息
 
 ---
-+ 网站复用[amazingremake主题](https://github.com/LittleYe233/hexo-theme-amazingremake)，感谢[@LittleYe233大佬](https://github.com/LittleYe233)~~~
++ 网站复用[amazingremake主题](https://github.com/LittleYe233/hexo-theme-amazingremake)，感谢[@LittleYe233](https://github.com/LittleYe233)~~~
 
 
 ***更新日志：***
