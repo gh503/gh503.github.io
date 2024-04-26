@@ -22,9 +22,15 @@ keywords:
 - windows系统，直接使用`notepad++`，配合丰富插件，效率非常高。
 - Linux系统，使用vim并配合增强配置，如果不打算将`vim`配置成`IDE`，不需要安装插件。这里也不打算提供`IDE`配置方案。
 
-## 直接给出增强配置
+## 增强配置
 
-这里的配置`vim`自带，不需要单独安装插件。
+这里的`vim`配置，不需要单独安装插件。
+
+- 若是自己的笔记本环境，可以直接配置在`/etc/vim/vimrc.local`，这样在普通用户和`root`用户同时生效
+- 若是公共环境，且自己用户使用，可以配置在`${HOME}/.vimrc`或`${HOME}/.vim/vimrc`。
+
+*`vimrc`脚本注释使用双引号。*
+
 
 ```vimrc
 " ============================================================================================ "
@@ -260,5 +266,11 @@ function! Zoom ()
 endfunction
 ```
 
-参考文章:  
+## vim帮助
+
+- 官方手册: [vimhelp.org](https://vimhelp.org/)
+- 翻译中文手册: [Vim 中文文档计划](https://yianwillis.github.io/vimcdoc/doc/help.html)
+- vim脚本开发: [编写vim脚本](https://yianwillis.github.io/vimcdoc/doc/usr_41.html)
+
+参考文章:
 无。
