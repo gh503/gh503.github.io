@@ -62,7 +62,7 @@ Hello, Latex!
 
 ![latex.pdf](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/latex.pdf.png)
 
-这篇文章适用`Markdown`写的：）。
+这篇文章是用`Markdown`写的：）。
 
 
 参考文章:
