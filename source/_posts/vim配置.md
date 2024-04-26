@@ -8,6 +8,7 @@ date: 2024-04-26 00:58:04
 thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/img/costa-rica-8606850_1920.jpg
 tags:
     - 'vim'
+    - 'linux'
 categories:
     - '部署'
 keywords:

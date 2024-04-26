@@ -2,6 +2,8 @@
 title: 使用免费CDN访问github资源
 tags:
     - 'CDN'
+    - 'linux'
+    - 'windows'
 categories:
     - '部署'
 toc: true

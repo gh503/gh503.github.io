@@ -8,6 +8,7 @@ date: 2024-04-26 09:08:16
 thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/img/flowers-3028429_1920.jpg
 tags:
     - 'git'
+    - 'linux'
 categories:
     - '部署'
 keywords:
