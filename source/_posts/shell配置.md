@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-26 01:31:52/shell配置.html
 mathJax: false
 date: 2024-04-26 09:31:52
-thumbnail:
+thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/img/banana-tree-8067514_1920.jpg
 tags:
     - 'shell'
     - 'bash'
