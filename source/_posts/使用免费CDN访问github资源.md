@@ -34,4 +34,4 @@ keywords:
 
 
 参考文章:  
-[免费CDN：jsDelivr+Github 使用方法](https://zhuanlan.zhihu.com/p/76951130)
+[1]：[免费CDN：jsDelivr+Github 使用方法](https://zhuanlan.zhihu.com/p/76951130)

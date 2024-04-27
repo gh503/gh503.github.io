@@ -125,4 +125,4 @@ export PAGER=less
 执行`pwd`测试。
 
 参考文章:
-[window中的cmd中设置别名(alias)及设置快捷键打开cmd](https://blog.csdn.net/YiRanZhiLiPoSui/article/details/83116819)
+[1]：[window中的cmd中设置别名(alias)及设置快捷键打开cmd](https://blog.csdn.net/YiRanZhiLiPoSui/article/details/83116819)
