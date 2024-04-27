@@ -62,8 +62,57 @@ Hello, Latex!
 
 ![latex.pdf](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/latex.pdf.png)
 
+## 配置优化
+
+![latex-settings](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/latex-settings.png)
+
+设置定位：`Options` -> `Congigure Texmaker`
+
+- `Commands`: 定义各个子功能的配置
+- `Quick Build`: 快速编译，调用`Commands`中设置执行。
+- `Editor`：编辑器，如字体、主题、显示相关的配置。
+- `Shortcuts`：快捷键，这里看到`Quick Build`使用`F1`。
+
+`Commands`保持默认配置。
+
+### 1.Quick Build
+左侧`Editor`中，如同`markdown`编辑文本，按`F1`后，可以在右侧直接查看到生成的`PDF`。
+
+### 2.Editor
+设置编辑器显示字体大小`14`，打开补全、行号、换行显示，个人习惯使用空格替换`TAB`。主题自行调整。
+
+### 3.编译支持中文
+
+实际测试过程中，如果在文本内容中增加中文，会出现问题。
+- 默认`pdflatex`编译会报错
+- 按官网说明，使用`xelatex`或者`lualatex`支持中文，编译成功但是pdf中没有中文。仔细查看编译输出，存在编码告警
+
+
+- 默认`pdflatex`编译，文本使用`GBK`编码，需要使用`CJKutf8`宏包
+- 切换`xelatex`或`lualatex`默认使用`utf8`编码解析，但是需要使用`ctex`宏包
+
+文本统一以`utf8`编码保存，使用`xelatex`编译，在中文文档中显示引用`ctex`，代码如下：
+```tex
+%test.tex
+\documentclass{article}
+\usepackage{ctex}
+\begin{document}
+Hello, LaTex!\\
+你好，雷泰赫！
+\end{document}
+```
+
+编译成功。
+![latex-zh-cn](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/latex-zh-cn.png)
+
+### 4.中文界面
+如果要切换中文界面：
+工具栏：`Options` -> 'interface language' -> 'zh_CN'
+
 这篇文章是用`Markdown`写的：）。
 
 
 参考文章:
-[经常用 LaTeX 的是些什么人？](https://www.zhihu.com/question/19847741)
+[1]：[经常用 LaTeX 的是些什么人？](https://www.zhihu.com/question/19847741)
+[2]：[tug.org/fontinstall](https://tug.org/fonts/fontinstall.html)
+[3]：[How does one type Chinese in LaTeX?](https://tex.stackexchange.com/questions/17611/how-does-one-type-chinese-in-latex)
