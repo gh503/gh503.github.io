@@ -87,7 +87,7 @@ Hello, Latex!
 - 默认`pdflatex`编译会报错
 - 按官网说明，使用`xelatex`或者`lualatex`支持中文，编译成功但是pdf中没有中文。仔细查看编译输出，存在编码告警
 
-
+在网上找到2种解决方法：
 - 默认`pdflatex`编译，文本使用`GBK`编码，需要使用`CJKutf8`宏包
 - 切换`xelatex`或`lualatex`默认使用`utf8`编码解析，但是需要使用`ctex`宏包
 
