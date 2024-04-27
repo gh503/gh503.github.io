@@ -14,10 +14,9 @@ keywords:
     - '效率提升'
 ---
 > 摘要
-LaTex写作是开发文档的一种，使用LaTex命令实现对文本内容完美的控制，基于不同的模板，最后编译为`pdf`格式。
+`LaTex`写作是开发文档的一种，使用`LaTex`命令实现对文本内容完美的控制，基于不同的模板，最后编译为`pdf`格式。
 <!-- more -->
-以前都是用MD，今天突然想学LaTex。前两天在word上调简历模板的时候，头都大了，效率不能更低了，一晚上都在调格式！！！而且图片、表格怎么都调不理想。
-而单纯MD在遇到表格和图片的时候很费力，MD工具也不是很好用。恰恰刚好发现LaTex，从word到MD，再到LaTex，希望能更进一步做到对文本的精确控制。
+以前都是用`MD`，今天突然想学`LaTex`。前两天在`word`上调简历模板的时候，头都大了，效率不能更低了，一晚上都在调格式！！！而且图片、表格怎么都调不理想。而单纯`MD`在遇到表格和图片的时候很费力，`MD`工具也不是很好用。恰恰刚好发现`LaTex`，从`word`到`MD`，再到`LaTex`，希望能更进一步做到对文本的精确控制。
 
 开发环境使用的是`Ubuntu 22.04 x86_64 桌面版`。`LaText`可以安装`texlive`，安装完整版本。同时使用编写工具`texmaker`辅助开发。
 
@@ -35,6 +34,9 @@ sudo apt install -y texmaker
 安装可视化工具。
 
 ![texmaker](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/LaTex-texmaker.png)
+
+`LaTex`文档格式转换：
+![latex-fm](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/latex-fm.png)
 
 ## 找手册
 
