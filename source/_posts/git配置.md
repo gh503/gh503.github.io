@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-26 01:08:16/git配置.html
 mathJax: false
 date: 2024-04-26 09:08:16
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/img/flowers-3028429_1920.jpg
+thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/flowers-3028429_1920.jpg
 tags:
     - 'git'
     - 'linux'

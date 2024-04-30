@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-26 07:50:13/Ubuntu2204安装LaTex完整版.html
 mathJax: false
 date: 2024-04-26 15:50:13
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/img/iceland-2154209_1920.jpg
+thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/iceland-2154209_1920.jpg
 tags:
     - 'LaTex'
 categories:
@@ -33,10 +33,10 @@ sudo apt install -y texmaker
 
 安装可视化工具。
 
-![texmaker](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/LaTex-texmaker.png)
+![texmaker](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/LaTex-texmaker.png)
 
 `LaTex`文档格式转换：
-![latex-fm](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/latex-fm.png)
+![latex-fm](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/latex-fm.png)
 
 ## 找手册
 
@@ -62,11 +62,11 @@ Hello, Latex!
 
 查看生成`latex.pdf`文件，打开显示`Hello, LaTex!`。
 
-![latex.pdf](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/latex.pdf.png)
+![latex.pdf](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/latex.pdf.png)
 
 ## 配置优化
 
-![latex-settings](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/latex-settings.png)
+![latex-settings](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/latex-settings.png)
 
 设置定位：`Options` -> `Congigure Texmaker`
 
@@ -105,7 +105,7 @@ Hello, LaTex!\\
 ```
 
 编译成功。
-![latex-zh-cn](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/latex-zh-cn.png)
+![latex-zh-cn](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/latex-zh-cn.png)
 
 ### 4.中文界面
 如果要切换中文界面：

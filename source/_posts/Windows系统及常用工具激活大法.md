@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-26 03:06:22/Windows系统及常用工具激活大法.html
 mathJax: false
 date: 2024-04-26 11:06:22
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/img/bee-8339991_1920.jpg
+thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/bee-8339991_1920.jpg
 tags:
     - 'windows'
     - 'IDM'

@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-26 02:21:23/tmux配置.html
 mathJax: false
 date: 2024-04-26 10:21:23
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/img/ai-generated-8327632_1920.jpg
+thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/ai-generated-8327632_1920.jpg
 tags:
     - 'tmux'
     - 'linux'
