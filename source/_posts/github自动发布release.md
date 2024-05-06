@@ -55,13 +55,21 @@ git push origin v0.0.1
 
 执行完成后，查看`Github`远程仓库存在`tag v0.0.1`。等待稍许，发现`Actions`触发构建任务，任务完成后，出现`Release v0.0.1`。
 
+如果`tag`存在，想覆盖推送：
+```bash
+git tag -a v0.0.1 -m 'release 0.0.1' -f
+git push origin v0.0.1 --force
+```
+
+但是`Github`远端仓库的`Release`包如果存在的话，需要提前删除才能成功创建`Release`。
+
 ### FAQ
 
 #### 1.执行失败
 如果失败，检查是否给资源仓库`Actions`写权限，定位 `资源仓库 -> Settings -> Actions -> General -> Workflow permissions -> Allow
 Github Actions to create and approve pull requests 勾选`：
 
-![workflow-actions](https://cdn.jsdelivr.net/gh/gh503/CDN@1.0.0/shotimg/workflow-actions.png)
+![workflow-actions](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/workflow-actions.png)
 
 #### 2.资源无法访问
 如果出现`CDN`资源无法访问的情况，尝试通过不同的`CDN`域名访问：
