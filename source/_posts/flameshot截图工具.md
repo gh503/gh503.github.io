@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-26 04:09:17/flameshot截图工具.html
 mathJax: false
 date: 2024-04-26 12:09:17
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/emotions-3490223_1920.jpg
+thumbnail: https://fastly.jsdelivr.net/gh/gh503/CDN@latest/img/emotions-3490223_1920.jpg
 tags:
     - 'flameshot'
     - 'linux'
@@ -32,7 +32,7 @@ keywords:
 ## 配置
 
 ### 1.配置一键截图
-![flameshot-key](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/flameshot-key.png)
+![flameshot-key](https://fastly.jsdelivr.net/gh/gh503/CDN@latest/shotimg/flameshot-key.png)
 
 使用快捷键`Ctrl Alt A`，直接可以截图。
 

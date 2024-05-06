@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-25 16:58:04/vim配置.html
 mathJax: false
 date: 2024-04-26 00:58:04
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/costa-rica-8606850_1920.jpg
+thumbnail: https://fastly.jsdelivr.net/gh/gh503/CDN@latest/img/costa-rica-8606850_1920.jpg
 tags:
     - 'vim'
     - 'linux'

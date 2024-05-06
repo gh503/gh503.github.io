@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-26 02:40:10/Linux环境的几个自定义命令.html
 mathJax: false
 date: 2024-04-26 10:40:10
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/hippo-515027_1920.jpg
+thumbnail: https://fastly.jsdelivr.net/gh/gh503/CDN@latest/img/hippo-515027_1920.jpg
 tags:
     - 'linux'
     - '自定义命令'

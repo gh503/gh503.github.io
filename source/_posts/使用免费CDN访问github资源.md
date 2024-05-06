@@ -11,7 +11,7 @@ recommend: 1
 uniqueId: 2024-04-25 10:06:11/使用免费CDN访问github资源.html
 mathJax: false
 date: 2024-04-25 18:06:11
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/iceland-1768744_1920.jpg
+thumbnail: https://fastly.jsdelivr.net/gh/gh503/CDN@latest/img/iceland-1768744_1920.jpg
 keywords:
     - 'jsdelivr'
     - 'github'
@@ -27,7 +27,7 @@ keywords:
 1.创建自己的github仓库用于存放资源文件，比如`gh_username/CDN`；
 2.提交图片到仓库，比如位置在`CDN/img/pic.jpg`；
 3.发布版本如`Release 1.0.0`，假设 `tag v1.0.0`；
-4.发布完成后，可以直接使用`jsdelivr`访问，路径为: `https://cdn.jsdelivr.net/gh/gh_username/CDN@latest/img/pic.jpg`
+4.发布完成后，可以直接使用`jsdelivr`访问，路径为: `https://fastly.jsdelivr.net/gh/gh_username/CDN@latest/img/pic.jpg`
 
 ## 网站资源说明
 因为不涉及版权，网站图片资源使用的是[pixabay免版税图片](https://pixabay.com/zh/)。

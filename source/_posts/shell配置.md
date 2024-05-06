@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-26 01:31:52/shell配置.html
 mathJax: false
 date: 2024-04-26 09:31:52
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/banana-tree-8067514_1920.jpg
+thumbnail: https://fastly.jsdelivr.net/gh/gh503/CDN@latest/img/banana-tree-8067514_1920.jpg
 tags:
     - 'linux'
     - 'shell'
@@ -116,7 +116,7 @@ export PAGER=less
 
 `win+R`，输入`regedit`，进入`计算机\HKEY_CURRENT_USER\Software\Microsoft\Command Processor`
 右边空白处右键：新建->字符串值
-![](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/win-reg-alias.png)
+![](https://fastly.jsdelivr.net/gh/gh503/CDN@latest/shotimg/win-reg-alias.png)
 
 数值名称: 比如`AutoRunCmdAlias`
 数值数据：这里写文件路径，`C:\Users\<Username>\cmdAlias.bat`

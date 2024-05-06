@@ -5,7 +5,7 @@ recommend: 1
 uniqueId: 2024-04-30 07:39:03/鸿蒙手机遇到github双因子认证.html
 mathJax: false
 date: 2024-04-30 15:39:03
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/CDN@latest/img/pug-8632718_1920.jpg
+thumbnail: https://fastly.jsdelivr.net/gh/gh503/CDN@latest/img/pug-8632718_1920.jpg
 tags:
     - '2FA'
 categories:
@@ -28,11 +28,11 @@ keywords:
 
 安装完成后，注意先刷新二维码页面后再扫描，防止过期
 
-![github-auth-2](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/2fa-auth-2.png)
+![github-auth-2](https://fastly.jsdelivr.net/gh/gh503/CDN@latest/shotimg/2fa-auth-2.png)
 
 按官方引导，一步步完成2FA认证。第2步的恢复码`download`到本地保存。
 
-![github-auth-3](https://cdn.jsdelivr.net/gh/gh503/CDN@latest/shotimg/2fa-auth-3.png)
+![github-auth-3](https://fastly.jsdelivr.net/gh/gh503/CDN@latest/shotimg/2fa-auth-3.png)
 
 参考文章:
 无。
