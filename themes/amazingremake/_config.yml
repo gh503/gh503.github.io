@@ -216,9 +216,9 @@ widgets:
     follow_link: ''
     # Links to be shown on the bottom of the profile widget
     social_links:
-      # Github:
-      #   icon: fab fa-github
-      #   url: ''
+      Github:
+        icon: fab fa-github
+        url: 'https://github.com/gh503'
       # Weibo:
       #   icon: fab fa-weibo
       #   url: ''
