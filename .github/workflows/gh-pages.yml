@@ -1,40 +1,60 @@
-name: Pages
+name: Deploy Hexo to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # default branch
+      - main  # 监听 main 分支的推送
+    paths-ignore:  # 新增：忽略不必要的文件变更
+      - '.gitignore'
+      - 'README.md'
+      - 'LICENSE'
+      - '.github/**'  # 避免 Actions 文件自身变更触发
+
+# 并发控制：如果多个推送同时发生，取消正在进行的旧任务
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:  # 新增：输出构建时间，便于调试
+      build_time: ${{ steps.build-time.outputs.time }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # If your repository depends on submodule, please see: https://github.com/actions/checkout
-          submodules: recursive
-      - name: Use Node.js 20.12.2
+          submodules: recursive  # 如果你用 git submodule 管理主题
+          fetch-depth: 1  # 新增：只拉取最新代码，加快速度
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
-          # Ref: https://github.com/actions/setup-node#supported-version-syntax
-          node-version: 'lts/Iron'
-      - name: Cache NPM dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
-      - name: Install Dependencies
-        run: npm install && cd themes/amazingremake && npm install
-      - name: Build
-        run: npm run build
+          node-version: '20'  # 简化写法，使用 LTS 版本
+          cache: 'npm'  # 新增：自动缓存 npm 依赖
+
+      - name: Install dependencies
+        run: |
+          npm ci  # 改用 npm ci 更快速可靠
+          if [ -d "themes/amazingremake" ]; then
+            cd themes/amazingremake && npm ci || npm install
+          fi
+
+      - name: Record build time  # 新增：记录构建时间
+        id: build-time
+        run: echo "time=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+
+      - name: Clean and build
+        run: |
+          npx hexo clean
+          npx hexo generate
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
   deploy:
     needs: build
     permissions:
@@ -48,3 +68,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      
+      # 新增：可选的通知，可以在仓库的 Actions 页面看到部署信息
+      - name: Display deployment info
+        run: |
+          echo "✅ Deployment completed!"
+          echo "📅 Build time: ${{ needs.build.outputs.build_time }}"
+          echo "🔗 Page URL: ${{ steps.deployment.outputs.page_url }}"
