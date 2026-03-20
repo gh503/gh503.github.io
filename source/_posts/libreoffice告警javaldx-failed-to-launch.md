@@ -1,19 +1,17 @@
 ---
 title: libreoffice告警javaldx failed to launch
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/libreofficejavaldxfailedtolaun_cover.jpg
 toc: true
 recommend: 1
 uniqueId: 2024-05-14 01:46:33/libreoffice告警javaldx failed to launch.html
 mathJax: false
 date: 2024-05-14 09:46:33
+thumbnail:
 tags:
 categories:
 keywords:
 ---
 > 摘要
 ubuntu22.04运行libreoffice告警failed to launch javaldx处理。
-![cover](https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/libreofficejavaldxfailedtolaun_cover.jpg)
-
 <!-- more -->
 
 ## 运行环境
