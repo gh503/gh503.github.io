@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: Linux 终端邮件客户端 Himalaya 配置指南
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/LinuxHimalaya_cover.jpg
 date: 2026-03-20
 tags: 
 - Linux
@@ -32,21 +32,23 @@ mathJax: false
 
 ## 安装
 
-### 方式一：官方安装脚本（推荐）
+### 方式一：手动下载安装（推荐）
+
+1. 访问 [Himalaya Releases 页面](https://github.com/pimalaya/himalaya/releases/latest)
+2. 下载对应系统的压缩包（如 `himalaya.x86_64-linux.tgz`）
+3. 解压并将 `himalaya` 二进制文件移动到 PATH 中的目录：
 
 ```bash
-# 安装到 ~/.local/bin
-curl -sSL https://raw.githubusercontent.com/pimalaya/himalaya/master/install.sh | sh -s -- -d ~/.local/bin
+# 解压
+tar -xzf himalaya.x86_64-linux.tgz
 
-# 验证安装
-himalaya --version
-```
+# 移动到用户目录
+mkdir -p ~/.local/bin
+mv himalaya ~/.local/bin/
 
-安装后确保 `~/.local/bin` 在 PATH 中：
-
-```bash
-export PATH="$HOME/.local/bin:$PATH"
+# 添加到 PATH
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ### 方式二：WakeMeOps（Ubuntu/Debian）
@@ -56,7 +58,7 @@ curl -sSL https://raw.githubusercontent.com/upciti/wakemeops/main/assets/install
 sudo apt install himalaya
 ```
 
-### 方式三：包管理器
+### 方式三：其他包管理器
 
 ```bash
 # Arch Linux
@@ -67,6 +69,12 @@ brew install himalaya
 
 # Rust
 cargo install himalaya
+```
+
+### 验证安装
+
+```bash
+himalaya --version
 ```
 
 ## 配置
