@@ -1,5 +1,5 @@
 ---
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/blog-images/images/1_Closeupofcolorfulprogrammingcodeonacompu.jpg
+thumbnail:
 title: GitHub Actions 自动为博客文章添加封面图
 date: 2025-03-20
 tags: 
