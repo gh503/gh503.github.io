@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: Linux 终端邮件客户端 Himalaya 配置指南
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/LinuxHimalaya_cover.jpg
 date: 2026-03-20
 tags: 
 - Linux
@@ -354,6 +354,66 @@ himalaya send ~/emails/report.mime
 ```bash
 himalaya send ~/emails/report.mime --account gmail
 ```
+
+## 显示优化配置
+
+可以通过配置文件自定义邮件列表的显示效果。
+
+### 基础配置示例
+
+```toml
+[accounts.你的账号]
+email = "your@email.com"
+
+# 邮件列表显示配置
+envelope.list.page-size = 15
+envelope.list.datetime-fmt = "%m-%d %H:%M"
+envelope.list.datetime-local-tz = true
+
+# 标志字符（邮件状态图标）
+envelope.list.table.unseen-char = "○"       # 未读
+envelope.list.table.replied-char = "↩"     # 已回复
+envelope.list.table.flagged-char = "★"     # 星标
+envelope.list.table.attachment-char = "📎" # 有附件
+
+# 颜色配置
+envelope.list.table.subject-color = "cyan"   # 主题颜色
+envelope.list.table.sender-color = "green"   # 发件人颜色
+envelope.list.table.date-color = "yellow"   # 日期颜色
+
+# 其他配置...
+```
+
+### 配置项说明
+
+| 配置项 | 说明 | 示例值 |
+|--------|------|--------|
+| `envelope.list.page-size` | 每页显示邮件数量 | `15` |
+| `envelope.list.datetime-fmt` | 日期格式 | `"%m-%d %H:%M"` |
+| `envelope.list.datetime-local-tz` | 使用本地时区 | `true` |
+| `envelope.list.table.unseen-char` | 未读标志 | `"○"` |
+| `envelope.list.table.replied-char` | 已回复标志 | `"↩"` |
+| `envelope.list.table.flagged-char` | 星标标志 | `"★"` |
+| `envelope.list.table.attachment-char` | 附件标志 | `"📎"` |
+| `envelope.list.table.subject-color` | 主题列颜色 | `"cyan"` |
+| `envelope.list.table.sender-color` | 发件人列颜色 | `"green"` |
+| `envelope.list.table.date-color` | 日期列颜色 | `"yellow"` |
+
+### 支持的颜色
+
+支持的颜色值：`black`、`red`、`green`、`yellow`、`blue`、`magenta`、`cyan`、`white`
+
+### 日期格式
+
+使用 chrono 格式字符串，常用格式：
+
+| 格式 | 示例 | 说明 |
+|------|------|------|
+| `%Y-%m-%d` | 2026-03-20 | 年-月-日 |
+| `%m-%d` | 03-20 | 月-日 |
+| `%m-%d %H:%M` | 03-20 14:30 | 月-日 时:分 |
+| `%Y-%m-%d %H:%M` | 2026-03-20 14:30 | 完整日期时间 |
+| `%H:%M` | 14:30 | 时:分 |
 
 ## 常见问题
 
