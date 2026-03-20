@@ -1,6 +1,6 @@
 ---
-thumbnail:
 title: GitHub Actions 自动为博客文章添加封面图
+thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/GitHubActions_cover.jpg
 date: 2026-03-20
 tags: 
 - GitHub Actions
