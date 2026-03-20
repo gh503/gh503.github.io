@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: Linux 终端邮件客户端 Himalaya 配置指南
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/LinuxHimalaya_cover.jpg
 date: 2026-03-20
 tags: 
 - Linux
@@ -373,6 +373,21 @@ himalaya send ~/emails/report.mime --account gmail
 ```bash
 himalaya --verbose list
 ```
+
+### Q4: 163/126 邮箱提示 "Unsafe Login"？
+
+这是 163/126 邮箱的安全限制，需要客户端发送 IMAP ID 命令。Himalaya 目前不支持此功能。
+
+**解决方法：**
+
+1. 访问安全设置页面验证白名单：
+   ```
+   http://config.mail.163.com/settings/imap/index.jsp?uid=你的邮箱
+   ```
+   
+2. 用手机短信验证后即可正常使用
+
+**注意：** 如果上述链接失效，可尝试其他邮箱服务（Gmail、QQ、Outlook）作为替代，这些邮箱无此限制。
 
 ## 总结
 
