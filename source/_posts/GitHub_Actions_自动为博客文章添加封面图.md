@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: GitHub Actions 自动为博客文章添加封面图
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/GitHubActions_cover.jpg
 date: 2025-03-20
 tags: 
 - GitHub Actions
@@ -19,8 +19,6 @@ mathJax: false
 ---
 
 > 
-![cover](https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/GitHubActions_cover.jpg)
-
 <!-- more -->
 
 本文介绍如何利用 GitHub Actions 实现博客文章封面图的自动化获取和引用，无需手动寻找和上传图片。
@@ -257,11 +255,6 @@ for md_file in source/_posts/*.md; do
   cdn_url="https://cdn.jsdelivr.net/gh/user/repo/images/$filename"
   sed -i '/^thumbnail:/d' "$md_file"
   sed -i "/^title:/a thumbnail: $cdn_url" "$md_file"
-  
-  # 9. 添加到正文
-  sed -i 's|![cover](https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/GitHubActions_cover.jpg)
-
-<!-- more -->|![cover]($cdn_url)\n\n<!-- more -->|' "$md_file"
   
   ((page_index++))
 done
