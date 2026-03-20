@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: Linux 终端邮件客户端 Himalaya 配置指南
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/LinuxHimalaya_cover.jpg
 date: 2026-03-20
 tags: 
 - Linux
@@ -32,11 +32,14 @@ mathJax: false
 
 ## 安装
 
-### 方式一：官方安装脚本
+### 方式一：官方安装脚本（推荐）
 
 ```bash
-# 需要 sudo 权限
+# 需要 sudo 权限，系统级安装
 curl -sSL https://raw.githubusercontent.com/pimalaya/himalaya/master/install.sh | sudo sh
+
+# 或者用户级安装（不需要 sudo）
+curl -sSL https://raw.githubusercontent.com/pimalaya/himalaya/master/install.sh | sh -s -- --prefix ~/.local
 ```
 
 ### 方式二：手动下载安装
@@ -83,13 +86,36 @@ himalaya --version
 
 ## 配置
 
-### 1. 创建配置目录和文件
+### 方式一：交互式向导（推荐）
+
+交互式向导需要 TTY 环境运行。在终端中直接执行：
+
+```bash
+# 如果没有配置文件，向导会提示创建
+himalaya
+
+# 或者为指定账号配置
+himalaya account configure <账号名>
+```
+
+向导会依次询问：
+1. **邮箱地址** - 如 `yourname@163.com`
+2. **IMAP 主机** - 如 `imap.163.com`
+3. **IMAP 端口** - 默认 `993`
+4. **IMAP 用户名** - 通常与邮箱地址相同
+5. **IMAP 密码** - 使用**授权码**而非登录密码
+6. **SMTP 配置** - 类似 IMAP 的设置
+7. **默认账号** - 是否设为默认账号
+
+### 方式二：手动配置
+
+1. 创建配置目录：
 
 ```bash
 mkdir -p ~/.config/himalaya
 ```
 
-### 2. 编辑配置 ~/.config/himalaya/config.toml
+2. 参考示例配置文件：`~/.config/himalaya/config.sample.toml`
 
 ## Gmail 配置
 
@@ -99,33 +125,25 @@ mkdir -p ~/.config/himalaya
 2. 进入 **安全** → 开启 **两步验证**
 3. **应用密码** → 选择"邮件" → 生成 16 位密码
 
-### 服务器信息
-
-| 服务 | 服务器 | 端口 | 加密 |
-|------|--------|------|------|
-| IMAP | imap.gmail.com | 993 | SSL/TLS |
-| SMTP | smtp.gmail.com | 587/465 | TLS/SSL |
-
 ### 配置示例
 
 ```toml
-default = "gmail"
-
 [accounts.gmail]
-display_name = "My Gmail"
 email = "your.email@gmail.com"
 
-[accounts.gmail.imap]
-host = "imap.gmail.com"
-port = 993
-username = "your.email@gmail.com"
-password = "xxxx xxxx xxxx xxxx"
+backend.type = "imap"
+backend.host = "imap.gmail.com"
+backend.port = 993
+backend.login = "your.email@gmail.com"
+backend.auth.type = "password"
+backend.auth.raw = "xxxx xxxx xxxx xxxx"
 
-[accounts.gmail.smtp]
-host = "smtp.gmail.com"
-port = 587
-username = "your.email@gmail.com"
-password = "xxxx xxxx xxxx xxxx"
+message.send.backend.type = "smtp"
+message.send.backend.host = "smtp.gmail.com"
+message.send.backend.port = 465
+message.send.backend.login = "your.email@gmail.com"
+message.send.backend.auth.type = "password"
+message.send.backend.auth.cmd = "xxxx xxxx xxxx xxxx"
 ```
 
 ## 163 邮箱配置
@@ -136,31 +154,25 @@ password = "xxxx xxxx xxxx xxxx"
 2. **POP3/SMTP/IMAP** → 开启 IMAP/SMTP 服务
 3. **客户端授权密码** → 获取授权码
 
-### 服务器信息
-
-| 服务 | 服务器 | 端口 | 加密 |
-|------|--------|------|------|
-| IMAP | imap.163.com | 993 | SSL |
-| SMTP | smtp.163.com | 465 | SSL |
-
 ### 配置示例
 
 ```toml
 [accounts.163]
-display_name = "My 163 Mail"
 email = "yourname@163.com"
 
-[accounts.163.imap]
-host = "imap.163.com"
-port = 993
-username = "yourname@163.com"
-password = "XXXXXXXXXXXX"
+backend.type = "imap"
+backend.host = "imap.163.com"
+backend.port = 993
+backend.login = "yourname@163.com"
+backend.auth.type = "password"
+backend.auth.raw = "XXXXXXXXXXXX"
 
-[accounts.163.smtp]
-host = "smtp.163.com"
-port = 465
-username = "yourname@163.com"
-password = "XXXXXXXXXXXX"
+message.send.backend.type = "smtp"
+message.send.backend.host = "smtp.163.com"
+message.send.backend.port = 465
+message.send.backend.login = "yourname@163.com"
+message.send.backend.auth.type = "password"
+message.send.backend.auth.raw = "XXXXXXXXXXXX"
 ```
 
 ## QQ 邮箱配置
@@ -171,31 +183,25 @@ password = "XXXXXXXXXXXX"
 2. **POP3/IMAP/SMTP 服务** → 开启
 3. 生成授权码（需短信验证）
 
-### 服务器信息
-
-| 服务 | 服务器 | 端口 | 加密 |
-|------|--------|------|------|
-| IMAP | imap.qq.com | 993 | SSL |
-| SMTP | smtp.qq.com | 465 | SSL |
-
 ### 配置示例
 
 ```toml
 [accounts.qq]
-display_name = "My QQ Mail"
 email = "123456789@qq.com"
 
-[accounts.qq.imap]
-host = "imap.qq.com"
-port = 993
-username = "123456789@qq.com"
-password = "XXXXXXXXXXXX"
+backend.type = "imap"
+backend.host = "imap.qq.com"
+backend.port = 993
+backend.login = "123456789@qq.com"
+backend.auth.type = "password"
+backend.auth.raw = "XXXXXXXXXXXX"
 
-[accounts.qq.smtp]
-host = "smtp.qq.com"
-port = 465
-username = "123456789@qq.com"
-password = "XXXXXXXXXXXX"
+message.send.backend.type = "smtp"
+message.send.backend.host = "smtp.qq.com"
+message.send.backend.port = 465
+message.send.backend.login = "123456789@qq.com"
+message.send.backend.auth.type = "password"
+message.send.backend.auth.raw = "XXXXXXXXXXXX"
 ```
 
 ## 126 邮箱配置
@@ -206,31 +212,25 @@ password = "XXXXXXXXXXXX"
 2. 开启 IMAP/SMTP 服务
 3. **客户端授权密码** → 获取授权码
 
-### 服务器信息
-
-| 服务 | 服务器 | 端口 | 加密 |
-|------|--------|------|------|
-| IMAP | imap.126.com | 993 | SSL |
-| SMTP | smtp.126.com | 465 | SSL |
-
 ### 配置示例
 
 ```toml
 [accounts.126]
-display_name = "My 126 Mail"
 email = "yourname@126.com"
 
-[accounts.126.imap]
-host = "imap.126.com"
-port = 993
-username = "yourname@126.com"
-password = "XXXXXXXXXXXX"
+backend.type = "imap"
+backend.host = "imap.126.com"
+backend.port = 993
+backend.login = "yourname@126.com"
+backend.auth.type = "password"
+backend.auth.raw = "XXXXXXXXXXXX"
 
-[accounts.126.smtp]
-host = "smtp.126.com"
-port = 465
-username = "yourname@126.com"
-password = "XXXXXXXXXXXX"
+message.send.backend.type = "smtp"
+message.send.backend.host = "smtp.126.com"
+message.send.backend.port = 465
+message.send.backend.login = "yourname@126.com"
+message.send.backend.auth.type = "password"
+message.send.backend.auth.raw = "XXXXXXXXXXXX"
 ```
 
 ## 多账号配置
