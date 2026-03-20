@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: Linux 终端邮件客户端 Himalaya 配置指南
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/LinuxHimalaya_cover.jpg
 date: 2026-03-20
 tags: 
 - Linux
@@ -32,7 +32,14 @@ mathJax: false
 
 ## 安装
 
-### 方式一：手动下载安装（推荐）
+### 方式一：官方安装脚本
+
+```bash
+# 需要 sudo 权限
+curl -sSL https://raw.githubusercontent.com/pimalaya/himalaya/master/install.sh | sudo sh
+```
+
+### 方式二：手动下载安装
 
 1. 访问 [Himalaya Releases 页面](https://github.com/pimalaya/himalaya/releases/latest)
 2. 下载对应系统的压缩包（如 `himalaya.x86_64-linux.tgz`）
@@ -51,16 +58,13 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### 方式二：WakeMeOps（Ubuntu/Debian）
+### 方式三：包管理器
 
 ```bash
+# WakeMeOps (Ubuntu/Debian)
 curl -sSL https://raw.githubusercontent.com/upciti/wakemeops/main/assets/install_repository | sudo bash
 sudo apt install himalaya
-```
 
-### 方式三：其他包管理器
-
-```bash
 # Arch Linux
 sudo pacman -S himalaya
 
