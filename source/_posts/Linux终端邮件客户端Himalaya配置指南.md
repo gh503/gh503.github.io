@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: Linux 终端邮件客户端 Himalaya 配置指南
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/LinuxHimalaya_cover.jpg
 date: 2026-03-20
 tags: 
 - Linux
@@ -115,7 +115,48 @@ himalaya account configure <账号名>
 mkdir -p ~/.config/himalaya
 ```
 
-2. 参考示例配置文件：`~/.config/himalaya/config.sample.toml`
+2. 使用 `secret-tool` 存储密码（需要安装 `libsecret-1-0-bin`）：
+
+```bash
+# 安装 secret-tool
+sudo apt install libsecret-1-0-bin
+
+# 存储 IMAP 密码
+secret-tool store --label="Himalaya IMAP" account <账号名> service himalaya-imap
+# 输入你的授权码
+
+# 存储 SMTP 密码
+secret-tool store --label="Himalaya SMTP" account <账号名> service himalaya-smtp
+# 输入你的授权码
+```
+
+3. 创建配置文件 `~/.config/himalaya/config.toml`：
+
+```toml
+[accounts.<账号名>]
+default = true
+email = "your@email.com"
+display-name = "Your Name"
+downloads-dir = "~/Emails/Inbox"
+
+backend.type = "imap"
+backend.host = "imap.163.com"  # 或 imap.gmail.com, imap.qq.com 等
+backend.port = 993
+backend.login = "your@email.com"
+backend.encryption.type = "tls"
+backend.auth.type = "password"
+backend.auth.cmd = "secret-tool lookup account <账号名> service himalaya-imap"
+
+message.send.backend.type = "smtp"
+message.send.backend.host = "smtp.163.com"  # 或 smtp.gmail.com 等
+message.send.backend.port = 465
+message.send.backend.login = "your@email.com"
+message.send.backend.encryption.type = "tls"
+message.send.backend.auth.type = "password"
+message.send.backend.auth.cmd = "secret-tool lookup account <账号名> service himalaya-smtp"
+```
+
+4. 参考完整示例：`~/.config/himalaya/config.sample.toml`
 
 ## Gmail 配置
 
