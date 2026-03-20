@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: Linux 终端邮件客户端 Himalaya 配置指南
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/LinuxHimalaya_cover.jpg
 date: 2026-03-20
 tags: 
 - Linux
@@ -414,6 +414,69 @@ envelope.list.table.date-color = "yellow"   # 日期颜色
 | `%m-%d %H:%M` | 03-20 14:30 | 月-日 时:分 |
 | `%Y-%m-%d %H:%M` | 2026-03-20 14:30 | 完整日期时间 |
 | `%H:%M` | 14:30 | 时:分 |
+
+## 邮件通知配置
+
+使用 Mailnag 实现多账户邮件通知。
+
+### 安装 Mailnag
+
+```bash
+sudo apt install mailnag dunst
+```
+
+### 配置文件
+
+创建 `~/.config/mailnag/mailnag.cfg`：
+
+```ini
+[core]
+poll_interval = 30
+imap_idle_timeout = 60
+enabled_plugins = libnotifyplugin
+
+[libnotifyplugin]
+notification_mode = 3
+max_visible_mails = 10
+
+[account1]
+enabled = 1
+type = imap
+name = 163邮箱
+user = your@163.com
+password = 
+server = imap.163.com
+port = 993
+ssl = 1
+
+[account2]
+enabled = 1
+type = imap
+name = Gmail
+user = your@gmail.com
+password = 
+server = imap.gmail.com
+port = 993
+ssl = 1
+```
+
+### 启动服务
+
+```bash
+# 命令行启动
+mailnag &
+
+# 或添加到自启动
+cp /usr/share/applications/mailnag.desktop ~/.config/autostart/
+```
+
+### 使用 Mailnag GUI 配置账户
+
+```bash
+mailnag-config
+```
+
+打开 GUI 后在 Accounts 界面添加账户，设置密码即可。
 
 ## 常见问题
 
