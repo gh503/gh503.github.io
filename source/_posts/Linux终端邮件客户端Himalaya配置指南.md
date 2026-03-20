@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: Linux 终端邮件客户端 Himalaya 配置指南
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/LinuxHimalaya_cover.jpg
 date: 2026-03-20
 tags: 
 - Linux
@@ -83,19 +83,13 @@ himalaya --version
 
 ## 配置
 
-### 1. 初始化配置目录
-
-```bash
-himalaya setup
-```
-
-### 2. 创建配置文件
+### 1. 创建配置目录和文件
 
 ```bash
 mkdir -p ~/.config/himalaya
 ```
 
-### 3. 编辑配置 ~/.config/himalaya/config.toml
+### 2. 编辑配置 ~/.config/himalaya/config.toml
 
 ## Gmail 配置
 
