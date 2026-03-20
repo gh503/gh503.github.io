@@ -1,5 +1,5 @@
 ---
-thumbnail:
+thumbnail: https://cdn.jsdelivr.net/gh/gh503/blog-images/images/1_Asleekdesktopsetupfeaturingamonitorkeybo.jpg
 title: Ubuntu 22.04 LTS + Obsidian + Ollama + OpenCode 搭建指南
 date: 2025-03-04
 tags: 
