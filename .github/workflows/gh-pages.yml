@@ -36,9 +36,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm ci || npm install  # 先尝试 npm ci，失败则使用 npm install 作为备用
+          # 直接使用 npm install，避免 lockfile 同步问题
+          npm install
           if [ -d "themes/amazingremake" ]; then
-            cd themes/amazingremake && npm ci || npm install
+            cd themes/amazingremake && npm install
           fi
 
       - name: Record build time  # 新增：记录构建时间
