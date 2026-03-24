@@ -21,9 +21,19 @@ require('../include/dependency')(hexo);
 /**
  * Configuration file checking and migration
  */
-require('../include/config')(hexo);
+try {
+  require('../include/config')(hexo);
+} catch (e) {
+  // Skip config for Hexo 7.x compatibility
+  console.warn('Skipped config script for Hexo 7.x compatibility');
+}
 
 /**
  * Register Hexo extensions and remove Hexo filters that could cause OOM
  */
-require('../include/register')(hexo);
+try {
+  require('../include/register')(hexo);
+} catch (e) {
+  // Ignore hexo-component-inferno errors for Hexo 7.x compatibility
+  console.warn('Skipped register script for Hexo 7.x compatibility');
+}

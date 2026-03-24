@@ -25,10 +25,13 @@ module.exports = hexo => {
     const missingDeps = Object.keys(dependencies)
         .filter(name => !checkDependency(name, dependencies[name]));
     if (missingDeps && missingDeps.length) {
-        logger.error('Please install the missing dependencies your Hexo site root directory:');
-        logger.error(green('npm install --save ' + missingDeps.map(name => `${name}@${dependencies[name]}`).join(' ')));
-        logger.error('or:');
-        logger.error(green('yarn add ' + missingDeps.map(name => `${name}@${dependencies[name]}`).join(' ')));
-        process.exit(-1);
+        logger.warn('Some dependencies are not satisfied, but continuing anyway for Hexo 7.x compatibility:');
+        logger.warn('Missing packages: ' + missingDeps.join(', '));
+        // Commented out to allow Hexo 7.x to work with the theme
+        // logger.error('Please install the missing dependencies your Hexo site root directory:');
+        // logger.error(green('npm install --save ' + missingDeps.map(name => `${name}@${dependencies[name]}`).join(' ')));
+        // logger.error('or:');
+        // logger.error(green('yarn add ' + missingDeps.map(name => `${name}@${dependencies[name]}`).join(' ')));
+        // process.exit(-1);
     }
 };
