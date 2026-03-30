@@ -1,6 +1,6 @@
 ---
-thumbnail: 
 title: APE/CUE 文件无损转换 FLAC 完整指南
+thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/APECUEFLAC_cover.jpg
 date: 2026-03-24
 tags:
 - 音频
