@@ -1,6 +1,6 @@
 ---
+thumbnail:
 title: Linux 终端邮件客户端 Himalaya 配置指南
-thumbnail: https://cdn.jsdelivr.net/gh/gh503/gh503.github.io/source/images/LinuxHimalaya_cover.jpg
 date: 2026-03-20
 tags: 
 - Linux
