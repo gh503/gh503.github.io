@@ -9,10 +9,10 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "6.0.0"
+    "version": "8.1.2"
   },
   "dependencies": {
-    "bulma-stylus": "^0.9.1",
+    "bulma-stylus": "0.8.0",
     "hexo-component-inferno": "^1.2.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
     "hexo-generator-archive": "^2.0.0",

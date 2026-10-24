@@ -5,3 +5,8 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 20
+  ignore:
+    # 主题 hexo-theme-amazingremake 的样式按 Bulma 0.8 的 API 写（变量、函数、类名）。
+    # 升到 bulma-stylus 0.9.x 后样式编译失败，而 Hexo 不报错、只产出一份 0 字节 CSS，
+    # 整站就变成没有样式的纯文本。以后要升，得先改主题样式，再手动放开这条忽略。
+    - dependency-name: "bulma-stylus"

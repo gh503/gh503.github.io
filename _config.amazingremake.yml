@@ -1,3 +1,19 @@
+navbar:
+  # Naviagtion menu items
+  menu:
+    Home: /
+    Archives: /archives
+    Categories: /categories
+    Tags: /tags
+    Projects: /projects
+    About: /about
+
+  # Links to be shown on the right of the navigation bar
+  links:
+    Download on GitHub:
+      icon: fab fa-github
+      url: https://github.com/LittleYe233/hexo-theme-amazingremake
+
 widgets:
   -
     position: left

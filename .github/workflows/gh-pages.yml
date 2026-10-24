@@ -51,6 +51,20 @@ jobs:
           npx hexo clean
           npx hexo generate
 
+      # 样式编译失败时，Hexo 不报错，而是「成功」产出一份 0 字节的 CSS，
+      # 整站于是在线变成没有样式的纯文本（2026-10 就这样坏过一次）。
+      # 这里把静默失败变成显式失败，让坏构建停在 CI，不要部署上线。
+      - name: Verify build output
+        run: |
+          set -e
+          test -s public/index.html || { echo "::error file=public/index.html::首页产物为空"; exit 1; }
+          empty_css=$(find public -name '*.css' -size 0)
+          if [ -n "$empty_css" ]; then
+            echo "::error::以下样式文件为空，主题样式没编译出来："
+            echo "$empty_css"
+            exit 1
+          fi
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
