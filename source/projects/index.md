@@ -11,7 +11,7 @@ comments: false
 
 <div class="card mb-5">
   <div class="card-image">
-    <img src="/images/projects/quench3d.jpg" alt="Quench3D 编辑器：工具栏、场景树与渲染视口" style="width:100%;height:auto;display:block">
+    <img src="/blog/images/projects/quench3d.jpg" alt="Quench3D 编辑器：工具栏、场景树与渲染视口" style="width:100%;height:auto;display:block">
   </div>
   <div class="card-content">
     <p class="title is-3 is-size-4-mobile">Quench3D</p>
@@ -49,7 +49,7 @@ comments: false
 
 <div class="card mb-5">
   <div class="card-image">
-    <img src="/images/projects/modkit.jpg" alt="modkit M1 的在线 3D 查看器" style="width:100%;height:auto;display:block">
+    <img src="/blog/images/projects/modkit.jpg" alt="modkit M1 的在线 3D 查看器" style="width:100%;height:auto;display:block">
   </div>
   <div class="card-content">
     <p class="title is-3 is-size-4-mobile">modkit M1</p>

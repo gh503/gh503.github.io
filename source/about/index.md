@@ -36,13 +36,13 @@ comments: false
 ---
 ***更新日志：***
 --*2024.04.22:使用hexo+github workflow成功部署网站*
---*2026.10.25:修复样式构建、新增[项目](/projects)页*
+--*2026.10.25:修复样式构建、新增[项目](/blog/projects/)页*
 
 <br>
 
 #### 本站推荐索引
 
-+ [项目](/projects) —— Quench3D（纯 Rust 3D 引擎）与 modkit（模块化机器人）
++ [项目](/blog/projects/) —— Quench3D（纯 Rust 3D 引擎）与 modkit（模块化机器人）
 
 <br>
 
@@ -57,6 +57,6 @@ comments: false
 <div class="time-axis-main">
 	<ul class="time-axis"></ul>
 </div>
-<script src="/js/about-me.js"></script>
+<script src="/blog/js/about-me.js"></script>
 <br>
 <br>

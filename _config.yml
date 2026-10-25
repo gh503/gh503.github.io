@@ -15,8 +15,9 @@ language: en
 timezone: 'Asia/Shanghai'
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://gh503.github.io
+## 站点根（https://gh503.github.io/）是个人主页，博客整体挂在 /blog 下
+url: https://gh503.github.io/blog
+root: /blog/
 permalink: :year/:month/:day/:hash/
 permalink_defaults:
 pretty_urls:
@@ -25,7 +26,8 @@ pretty_urls:
 
 # Directory
 source_dir: source
-public_dir: public
+## 博客产物写到 public/blog，public/ 根留给 landing/ 的个人主页（见 scripts/postbuild.js）
+public_dir: public/blog
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
