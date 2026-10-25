@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "hexo": "^8.1.2",
-    "hexo-pagination": "^2.0.0",
+    "hexo-pagination": "^4.0.0",
     "hexo-renderer-inferno": "^1.0.2",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-util": "^4.0.0"
