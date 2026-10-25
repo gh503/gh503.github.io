@@ -122,7 +122,7 @@ footer:
       url: https://github.com/LittleYe233/hexo-theme-amazingremake
 
   # HTML code of copyright information in footer
-  copyright: © 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br />
+  copyright: © 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="https://github.com/gh503/gh503.github.io/issues" target="_blank" rel="noopener">提 issue</a>，立即处理]<br />
 
   # Start time of this website in footer (omitted to be invisible)
   # NOTE: The value will be passed in the constructor of the ``Date``
