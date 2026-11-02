@@ -5,8 +5,8 @@ comments: false
 ---
 
 <p class="subtitle is-6 has-text-grey">
-两个从零开始、长期在做的项目：一个把 3D 引擎和物理引擎自己写一遍，一个把机器人从图纸做到能抓东西。<br>
-都开源，都能在浏览器里直接玩 —— 不用装任何东西。
+三个长期在做的开源项目：3D 引擎、模块化机器人，以及本地优先的个人助理。<br>
+Quench3D 和 modkit M1 提供在线演示；Jarvis 在自己的机器上运行，通过浏览器或 PWA 使用。
 </p>
 
 <div class="card mb-5">
@@ -85,7 +85,37 @@ comments: false
   </div>
 </div>
 
+<div class="card mb-5" id="jarvis" style="scroll-margin-top:80px">
+  <div class="card-image">
+    <img src="/blog/images/projects/jarvis.jpg" alt="Jarvis 浅色主题下的 Studio 记忆星座与记忆关联" loading="lazy" style="width:100%;height:auto;display:block">
+  </div>
+  <div class="card-content">
+    <p class="title is-3 is-size-4-mobile">Jarvis</p>
+    <p class="subtitle is-6 has-text-grey">本地优先的个人助理 · 文本与语音对话 · 记忆与提醒</p>
+    <div class="content">
+      <p>跑在自己机器上的个人助理，通过浏览器或 PWA 使用。把对话、按需感知、记忆和提醒放在一起，并用 Studio 观察台查看运行状态。</p>
+      <ul>
+        <li><strong>交互</strong>：文本与语音对话，支持打断；按需读取屏幕 OCR 或摄像头单帧。</li>
+        <li><strong>记忆</strong>：基于 SQLite 保存与整合记忆，支持提醒、晨报和记忆关联展示。</li>
+        <li><strong>模型</strong>：支持 OpenAI 与 Anthropic 多套协议，以及按优先级切换的模型来源池。</li>
+        <li><strong>界面</strong>：内置深色、浅色和跟随系统三档主题，记住浏览器中的选择。</li>
+      </ul>
+    </div>
+    <div class="tags mb-2">
+      <span class="tag is-light">TypeScript</span>
+      <span class="tag is-light">Node.js</span>
+      <span class="tag is-light">SQLite</span>
+      <span class="tag is-light">PWA</span>
+      <span class="tag is-light">本地优先</span>
+    </div>
+    <p class="is-size-7 has-text-grey mb-3">使用方式：在本机部署后访问浏览器界面；安装与配置见仓库说明。</p>
+    <div class="buttons">
+      <a class="button is-small is-primary" href="https://github.com/gh503/jarvis" target="_blank" rel="noopener">源码与安装说明</a>
+    </div>
+  </div>
+</div>
+
 <p class="title is-5 mt-5">还有</p>
 
 日常代码在 [GitHub](https://github.com/gh503)，国内镜像在 [Gitee](https://gitee.com/angusrobot)。
-两个项目都按「先写清楚它现在到哪一步，再谈它将来能做什么」的方式维护 —— 状态表里能跑的就是能跑，跑不了的就标未开始。
+这些项目都按「先写清楚它现在到哪一步，再谈它将来能做什么」的方式维护 —— 状态表里能跑的就是能跑，跑不了的就标未开始。
