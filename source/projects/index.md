@@ -9,28 +9,23 @@ comments: false
 Quench3D 和 modkit M1 提供在线演示；Jarvis 在自己的机器上运行，通过浏览器或 PWA 使用。
 </p>
 
-<div class="card mb-5">
+<div class="card mb-5" id="quench3d" style="scroll-margin-top:80px">
   <div class="card-image">
     <img src="/blog/images/projects/quench3d.jpg" alt="Quench3D 编辑器：工具栏、场景树与渲染视口" style="width:100%;height:auto;display:block">
   </div>
   <div class="card-content">
     <p class="title is-3 is-size-4-mobile">Quench3D</p>
-    <p class="subtitle is-6 has-text-grey">纯 Rust 的 3D 引擎 · 物理引擎从零实现 · 桌面端与 Web 端同一套代码</p>
+    <p class="subtitle is-6 has-text-grey">用编辑器和 AI 搭建 3D 场景 · 自研物理 · 桌面 / Web / CLI / MCP</p>
     <div class="content">
-      <p>
-        面向「模型展示 / 场景搭建 / 物理仿真 / 小游戏原型」四类事情。
-        渲染基于 <code>wgpu</code>，物理是自己写的，不引第三方物理库。
-      </p>
+      <p>面向模型展示、空间搭建、物理演示和交互原型。手工操作与 AI 助手修改同一个可见场景，也能保存为 JSON，交给命令行或外部 agent 继续验证与输出。</p>
       <ul>
-        <li><strong>渲染</strong>：wgpu 前向 PBR，Vulkan / Metal / DX12 / WebGPU / WebGL2 同一份着色器，带阴影、天空、实例化、离屏截图。</li>
-        <li><strong>物理</strong>：自研刚体，宽相 / 窄相 + 顺序冲量求解器，5 种关节与角色控制器；热路径零分配。</li>
-        <li><strong>编辑器</strong>：egui 的工具栏 / 场景树 / 属性面板，桌面端与 Web 端是同一份界面代码。</li>
-        <li><strong>体量</strong>：约 3.7 万行 Rust + 0.65 千行 WGSL，引擎本体 <code>#![forbid(unsafe_code)]</code>。</li>
+        <li><strong>场景与外观</strong>：导入模型、创建图元、调整位姿／颜色／灯光／材质，使用标准视角与聚焦，保存场景或导出模型。</li>
+        <li><strong>AI 助手</strong>：自然语言创建和修改独立图元，配置刚体与轨道、控制播放；支持连续追问、本地聊天历史和实际工具回执。</li>
+        <li><strong>空间演示</strong>：宇宙星空、中文名称、连续轨道线，以及“月球绕移动地球”的嵌套轨道。公转是运动学动画，不是万有引力／N 体模拟。</li>
+        <li><strong>自动化</strong>：CLI／MCP 提供场景诊断、物理推演、截图与视频输出。纯物理仿真无需 GPU，出图需要可用渲染后端。</li>
       </ul>
-      <p>
-        名字也有来历：原来的 <code>forge3d</code> 在 Rust、PyPI、Unity 素材领域都已经被占，
-        于是改叫 Quench3D（淬火——锻造之后的下一道工序）。
-      </p>
+      <p><strong>开始使用：</strong>下载桌面包，解压运行 <code>quench3d-editor</code>；在右侧 AI 助手配置支持工具调用的 OpenAI Chat Completions 兼容模型。Web AI 从源码根目录运行 <code>python3 tools/agent_server.py</code>，访问 <code>http://127.0.0.1:8765</code>；静态在线编辑器不提供 AI 请求代理。</p>
+      <p>AI 工具暂不支持任意修改模型子网格、复合体和父子层级；SDK 的能力范围大于实时助手。参数、工具契约和限制统一见项目文档。</p>
     </div>
     <div class="tags mb-2">
       <span class="tag is-light">Rust</span>
@@ -42,7 +37,9 @@ Quench3D 和 modkit M1 提供在线演示；Jarvis 在自己的机器上运行�
     <p class="is-size-7 has-text-grey mb-3">状态：桌面端与编辑器可用，Web 端已部署；还在快速迭代。</p>
     <div class="buttons">
       <a class="button is-small is-primary" href="https://gh503.github.io/quench3d/" target="_blank" rel="noopener">在线 Demo</a>
-      <a class="button is-small" href="https://github.com/gh503/quench3d" target="_blank" rel="noopener">源码</a>
+      <a class="button is-small" href="https://github.com/gh503/quench3d/releases/latest" target="_blank" rel="noopener">下载桌面版</a>
+      <a class="button is-small" href="https://github.com/gh503/quench3d#readme" target="_blank" rel="noopener">源码与三分钟上手</a>
+      <a class="button is-small" href="https://github.com/gh503/quench3d/blob/main/docs/ai_agent.md" target="_blank" rel="noopener">AI 配置与工具</a>
     </div>
   </div>
 </div>
